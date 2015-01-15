@@ -1,0 +1,74 @@
+<!DOCTYPE hmtl>
+<html>
+
+<head>
+	<h1>Widgets, Inc.</h1>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="widgets-1.0.js">
+	</script>
+</head>
+
+<body>
+	<form id="form" action="http://www.widgets.com/survey" method="POST" onreset="resetForm();" onsubmit="return validate();">
+		<table id = "table">
+			<tr>
+				<td id="firstNameLabel">First name *</td>
+				<td><input type="text" name="firstName"></td>
+			</tr>
+			<tr>
+				<td id="lastNameLabel">Last name *</td>
+				<td><input type="text" name="lastName"></td>
+			</tr>
+			<tr>
+				<td>Street Address</td>
+				<td><input type="text" name="streetAddress"></td>
+			</tr>
+			<tr>
+				<td>City</td>
+				<td><input type="text" name="city"></td>
+			</tr>
+			<tr>
+				<td id="countryLabel">Country *</td>
+				<td>
+					<select id="country" name="country" onchange="onCountryChanged();">
+						<option value=""></option>
+						<option value="USA">USA</option>
+						<option value="Canada">Canada</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="stateLabel">State/Province *</td>
+				<td><select id="state" name="state" /></td>
+			</tr>
+			<tr>
+				<td>Postal Code</td>
+				<td><input type="text" name="postalCode"></td>
+			</tr>
+			<tr>
+				<td>Comments</td>
+				<td>
+					<textarea name="comments"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #FF0000;">* - Required Fields</td>
+			</tr>
+			<tr>
+				<td id="blankFields" class="hiddenWarning">Missing values.</td>
+			</tr>
+			<tr align='center' class="formButtonRow">
+				<td><input type="reset" value="Reset" class="formButton"></td>
+				<td><input type="submit" value="Submit" class="formButton"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+<footer>
+	<div id="footerText">
+		<script>printFooter();</script>
+	</div>
+</footer>
+
+</html>
